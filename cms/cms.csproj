@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{05F3AAFD-075A-4250-85AA-0A17AA9D11B9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>cms</RootNamespace>
+    <AssemblyName>cms</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>2.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>F6C90ABE7318B3E2D058A034ABF4E5F1A56A4AB1</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>cms_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>mianLogo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.4">
+      <HintPath>..\..\..\..\..\Downloads\Bunifu_UI_v1.4.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2">
+      <HintPath>..\..\..\..\..\Downloads\Compressed\Guna.UI-Framework-Lib-master\Guna.UI2.WinForms_v2.0.0.6\.net 4.0\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\..\..\Downloads\MySql.Data.DLL</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="admin_control.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin_control.Designer.cs">
+      <DependentUpon>admin_control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MS_Control.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MS_Control.Designer.cs">
+      <DependentUpon>MS_Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="administrator_appointment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="administrator_appointment.Designer.cs">
+      <DependentUpon>administrator_appointment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cc_control.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cc_control.Designer.cs">
+      <DependentUpon>cc_control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view_reply.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view_reply.Designer.cs">
+      <DependentUpon>view_reply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="update_MS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="update_MS.Designer.cs">
+      <DependentUpon>update_MS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_appointment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View_appointment.Designer.cs">
+      <DependentUpon>View_appointment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mS_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mS_Login.Designer.cs">
+      <DependentUpon>mS_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="recptionist_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="recptionist_login.Designer.cs">
+      <DependentUpon>recptionist_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="doc_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="doc_login.Designer.cs">
+      <DependentUpon>doc_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin_login.Designer.cs">
+      <DependentUpon>admin_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="doctor_appointment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="doctor_appointment.Designer.cs">
+      <DependentUpon>doctor_appointment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MS_history.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MS_history.Designer.cs">
+      <DependentUpon>MS_history.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cms.Designer.cs">
+      <DependentUpon>cms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="appointment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="appointment.Designer.cs">
+      <DependentUpon>appointment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reception_control.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reception_control.Designer.cs">
+      <DependentUpon>reception_control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lower_staff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lower_staff.Designer.cs">
+      <DependentUpon>lower_staff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="doctor_control.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="doctor_control.Designer.cs">
+      <DependentUpon>doctor_control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="report.Designer.cs">
+      <DependentUpon>report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="splach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="splach.Designer.cs">
+      <DependentUpon>splach.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="admin_control.resx">
+      <DependentUpon>admin_control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MS_Control.resx">
+      <DependentUpon>MS_Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="administrator_appointment.resx">
+      <DependentUpon>administrator_appointment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cc_control.resx">
+      <DependentUpon>cc_control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view_reply.resx">
+      <DependentUpon>view_reply.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="update_MS.resx">
+      <DependentUpon>update_MS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_appointment.resx">
+      <DependentUpon>View_appointment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mS_Login.resx">
+      <DependentUpon>mS_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="recptionist_login.resx">
+      <DependentUpon>recptionist_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="doc_login.resx">
+      <DependentUpon>doc_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin_login.resx">
+      <DependentUpon>admin_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="doctor_appointment.resx">
+      <DependentUpon>doctor_appointment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MS_history.resx">
+      <DependentUpon>MS_history.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cms.resx">
+      <DependentUpon>cms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="appointment.resx">
+      <DependentUpon>appointment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reception_control.resx">
+      <DependentUpon>reception_control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lower_staff.resx">
+      <DependentUpon>lower_staff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="doctor_control.resx">
+      <DependentUpon>doctor_control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="report.resx">
+      <DependentUpon>report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="splach.resx">
+      <DependentUpon>splach.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="hospital_health_clinic_building_medical_health_icon_140392.ico" />
+    <Content Include="mianLogo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
